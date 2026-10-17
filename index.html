@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#faeef0" />
+    <meta name="description" content="A little birthday experience made with love." />
+    <title>A Birthday Surprise</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app" aria-live="polite">
+      <section class="screen welcome-screen active" data-screen="welcome">
+        <div class="light-string" aria-hidden="true"><span>●</span><span>●</span><span>●</span><span>●</span><span>●</span><span>●</span><span>●</span><span>●</span></div>
+        <div class="welcome-center"><div class="cute-face">🥺🤍</div><p class="eyebrow">A LITTLE SURPRISE FOR YOU</p><button class="primary" data-go="card">Set the mood <span>✦</span></button><div class="progress-dots"><i class="current"></i><i></i><i></i><i></i><i></i></div></div>
+        <p class="bottom-note">Made with lots of love <span>♡</span></p>
+      </section>
+
+      <section class="screen" data-screen="card">
+        <div class="page-content card-page"><p class="eyebrow">CELEBRATION MODE</p><article class="hero-card"><span class="tiny-heart">♥</span><h1>Happy Birthday</h1><span class="divider">•</span><p>A tiny celebration page made with lots of love.</p></article><div class="cute-face">🥺🤍</div><button class="primary" data-go="cake">Release the balloons <span>🎈</span></button><div class="progress-dots"><i></i><i class="current"></i><i></i><i></i><i></i></div></div>
+      </section>
+
+      <section class="screen" data-screen="cake">
+        <div class="page-content cake-page"><p class="eyebrow">MAKE A WISH</p><h1>Cake Time</h1><p class="subhead">Cut the cake and make a wish</p><div class="cake-wrap"><div class="cake-emoji">🎂</div><div class="sprinkles">✦　·　✧　·　✦</div></div><h2>Close your eyes and make a wish</h2><p>When you're ready, tap the button below.</p><button class="primary" data-go="wishes">I Made My Wish <span>♡</span></button><div class="progress-dots"><i></i><i></i><i class="current"></i><i></i><i></i></div></div>
+      </section>
+
+      <section class="screen" data-screen="wishes">
+        <div class="page-content wishes-page"><p class="eyebrow">A FEW LITTLE WISHES</p><h1>Reveal your birthday wishes</h1><p class="subhead">Every card holds a little surprise. ✨</p><div class="wish-cards">
+          <button class="wish-card" aria-pressed="false"><span class="card-number">01</span><span class="card-heart">♥</span><span class="card-copy">May your day be filled with laughter, love, and memories that last a lifetime.</span><span class="card-hint">Tap to flip back</span></button>
+          <button class="wish-card" aria-pressed="false"><span class="card-number">02</span><span class="card-heart">♥</span><span class="card-copy">May this year fill your heart with calm, your mind with confidence, and your days with unexpected moments of happiness.</span><span class="card-hint">Tap to flip back</span></button>
+          <button class="wish-card" aria-pressed="false"><span class="card-number">03</span><span class="card-heart">♥</span><span class="card-copy">You deserve love that feels effortless, memories that never fade, and a life that is gentle with your soul.</span><span class="card-hint">Tap to flip back</span></button>
+        </div><div class="discovery"><span id="wish-count">0 of 3 wishes discovered</span><div class="meter"><i id="wish-meter"></i></div></div><button class="text-button" data-go="letter">Continue to your letter <span>→</span></button><div class="progress-dots"><i></i><i></i><i></i><i class="current"></i><i></i></div></div>
+      </section>
+
+      <section class="screen" data-screen="letter">
+        <div class="page-content letter-page"><article class="letter"><header><span>● ● ●</span><span>HAPPY-BIRTHDAY-LETTER.TXT</span><button data-go="wishes" aria-label="Close letter">CLOSE</button></header><div class="letter-body"><p class="signed">With lots of love</p><h1>Dear Birthday Girl,</h1><p><b>H</b>appy Birthday to someone who makes the world feel softer, brighter, and full of little moments worth remembering.</p><p><b>M</b>ay this year bring you calm in your heart, confidence in your dreams, and countless reminders of how truly loved you are.</p><p><b>Y</b>ou deserve people who choose you, memories you'll treasure forever, and a happiness that feels effortless every day. 🌸</p><p class="signoff">With all my love,<br /><strong>always yours</strong></p></div><button class="restart" data-go="welcome">restart</button></article><div class="progress-dots"><i></i><i></i><i></i><i></i><i class="current"></i></div></div>
+      </section>
+      <div class="balloons" aria-hidden="true"></div><div class="confetti" aria-hidden="true"></div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
